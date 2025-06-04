@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-  </scrip let linkText = "Click Me! ";
-let repeatedLinkText = linkText.repeat(1000); // Repeats "Click Me! " 1000 times
+<head>
+  <title>Infinite Tab Opener</title>
+</head>
+<body>
 
-let link = document.createElement('a');
-link.href = "https://gmail.com";
-link.textContent = repeatedLinkText;
-document.body.appendChild(link);>
-  </body>
+  <script>
+    function openNewTab() {
+      var count = 0;
+      setInterval(function() {
+        count++;
+        window.open("https://www.example.com", "_blank"); // Replace with desired URL
+        if (count > 5) {
+          clearInterval(intervalId); // Stop after opening a few tabs
+        }
+      }, 2000); // Open a tab every 2 seconds
+      
+    }
+
+    // Call the function to start opening tabs
+    openNewTab();
+  </script>
+
+</body>
 </html>
