@@ -1,1 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Laggy Page</title>
+</head>
+<body>
 
+  <h1>This page might be slow...</h1>
+
+  <script>
+    // This loop will perform a large number of computations, causing delay
+    for (let i = 0; i < 1000000; i++) {
+      // Perform some dummy calculation to consume CPU time
+      let result = Math.sqrt(i) * Math.sin(i);
+    }
+  </script>
+
+</body>
+</html>
